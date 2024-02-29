@@ -5,12 +5,6 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.ConfigureHttpJsonOptions(option =>
-{
-    option.SerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-    option.SerializerOptions.PropertyNamingPolicy = null;
-});
-
 // Add services to the container.
 
 builder.Services.AddControllers();
